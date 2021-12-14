@@ -3,19 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        td {
+            width: 25px;
+            text-align: center;
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
 </head>
 <body>
 <script>
     let veTable = '<table border="1">'
-    for (let i=1;i<=10;i++){
-        veTable = veTable + '<tr>';
-        for (let j=1;j<=10;j++){
-            veTable = veTable +'<td>'+i*j+'</td>';
+    /* for (let i=1;i<=10;i++){
+         veTable = veTable + '<tr>';
+         for (let j=1;j<=10;j++){
+             veTable = veTable +'<td>'+i*j+'</td>';
+         }
+         veTable = veTable +'</tr>';
+     }
+     veTable=veTable + '</table>'
+     */
+    let i = 1;
+    while (i <= 10) {
+        veTable = veTable + '<tr>'
+        let j = 1;
+        while (j <= 10) {
+            veTable = veTable + '<td>' + i * j + '</td>';
+            j++;
         }
-        veTable = veTable +'</tr>';
+        veTable = veTable + '</tr>';
+        i++;
     }
-    veTable=veTable + '</table>'
+    veTable = veTable + '</table>'
     document.write(veTable)
+    console.log(veTable)
 </script>
 </body>
 </html>
